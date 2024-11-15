@@ -1,16 +1,20 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import TypingAnimation from "@/components/ui/typing-animation";
+import Particles from "@/components/ui/particles";
 
 import "@/styles/globals.css";
-import Particles from "@/components/ui/particles";
 ---
 
 <Layout title="Bela Health">
   <main class="relative w-full h-screen">
     <Particles className="absolute inset-0 w-full h-full" client:load />
     <div class="relative z-10 flex items-center justify-center w-full h-full">
-      <TypingAnimation className="text-5xl" text="Demnächst Verfügbar" client:load/>
+        <TypingAnimation
+          className="text-5xl w-[250px] sm:w-full text-center"
+          text="Demnächst Verfügbar"
+          client:load
+        />
     </div>
   </main>
 </Layout>
